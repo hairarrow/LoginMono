@@ -5,7 +5,7 @@ config:
       arrivalRate: 5
       rampTo: 20
 scenarios:
-  - name: 'Sign in, send a new message and fetch a list of chats'
+  - name: 'Sign in'
     flow:
       - post:
           url: '/'

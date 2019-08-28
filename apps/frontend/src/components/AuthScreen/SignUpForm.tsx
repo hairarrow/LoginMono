@@ -47,7 +47,7 @@ const SignUpForm: React.FC<RouteComponentProps<any>> = ({ history }) => {
 	const handleSignUp = useCallback(() => {
 		signUp({ variables: { username, password, passwordConfirm, name } })
 			.then(() => {
-				history.replace("/sign-in");
+				history.replace("/im-in");
 			})
 			.catch(error => {
 				setError(error.message || error);
