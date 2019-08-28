@@ -1,0 +1,15 @@
+overwrite: true
+generates:
+  ./types/graphql.d.ts:
+    schema: ./modules/*/index.ts
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      useIndexSignature: true
+      contextType: ../context#MyContext
+      mappers:
+        User: ../db#User
+      scalars:
+        Date: Date
+        URL: string
